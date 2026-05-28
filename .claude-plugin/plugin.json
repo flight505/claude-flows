@@ -1,0 +1,23 @@
+{
+  "name": "claude-flows",
+  "version": "0.1.0",
+  "description": "Helper plugin for Claude Code's autonomous primitives — /goal, /branch, worktrees, dynamic workflows. Wraps native features with opinionated defaults and safety guardrails.",
+  "author": {
+    "name": "Jesper Vang",
+    "email": "jesper_vang@me.com",
+    "url": "https://github.com/flight505"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/flight505/claude-flows",
+  "homepage": "https://github.com/flight505/claude-flows",
+  "keywords": [
+    "claude-code",
+    "goal",
+    "branch",
+    "worktrees",
+    "dynamic-workflows",
+    "primitives",
+    "helper",
+    "ultracode"
+  ]
+}

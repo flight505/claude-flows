@@ -1,0 +1,11 @@
+# OS / editor noise
+.DS_Store
+*.swp
+*~
+
+# Firecrawl / scrape cache
+.firecrawl/
+
+# Local dev state
+*.log
+.flows-test/
