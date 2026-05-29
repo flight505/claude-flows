@@ -1,6 +1,6 @@
 {
   "name": "claude-flows",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Helper plugin for Claude Code's autonomous primitives — /goal, /branch, worktrees, dynamic workflows. Wraps native features with opinionated defaults and safety guardrails.",
   "author": {
     "name": "Jesper Vang",
@@ -19,5 +19,8 @@
     "primitives",
     "helper",
     "ultracode"
+  ],
+  "commands": [
+    "./commands/flow-goal.md"
   ]
 }

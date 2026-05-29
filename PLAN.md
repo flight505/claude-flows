@@ -193,13 +193,17 @@ The estimates are conservative defaults — *not* magic. They are better than ze
 - `commands/`, `lib/`, `templates/` directories exist but are empty.
 - **Marketplace entry**: `claude-flows` registered at v0.1.0 in the parent marketplace.
 
-### Phase 1 — `/flow-goal` only (next session)
+### Phase 1 — `/flow-goal` only ✓ shipped in v0.2.0
 
-- Implement `commands/flow-goal.md` as a conversation-shaped slash command (no bash script needed).
-- Write `templates/goal-shapes.md` with 5–7 concrete examples of well-shaped goals.
-- Verify against all four gates listed under `/flow-goal` above.
-- Update plugin.json `commands` array and re-register in marketplace.json.
-- Use it on a real task at least once before merging.
+- ✓ `commands/flow-goal.md` — conversation-shaped slash command (no bash). Procedure: inspect cwd, ask ≤1 clarifying question, draft 2–4 clauses with turn cap, present `y/edit/cancel`, invoke `/goal` on confirm.
+- ✓ `templates/goal-shapes.md` — 7 patterns (migration, refactor, bug-fix, test-fix, hardening, plan-driven, doc completion) plus an anti-patterns table and a "when to ask a clarifying question" decision table.
+- ✓ `plugin.json` `commands` array populated; claude-flows bumped to v0.2.0.
+- ✓ `marketplace.json` claude-flows entry version bumped.
+- **Manual verification gates** (not auto-runnable — to be confirmed by the user on a real task before declaring Phase 1 fully proven):
+  - Invoking on a clear migration task produces a 3-clause goal with at least one verification command.
+  - Invoking on an ambiguous task triggers ≤1 clarifying question, not three.
+  - Drafted goal always includes a turn cap.
+  - `cancel` exits without invoking `/goal`.
 
 ### Phase 2 — `/flow-fork` (deferred)
 
@@ -221,4 +225,4 @@ These are decisions to make when the relevant phase starts, not now:
 
 ---
 
-**Status:** Phase 0 complete on creation of this file. Phase 1 starts in the next session.
+**Status:** Phase 1 shipped in v0.2.0 (`/flow-goal` + `goal-shapes.md`). Phases 2 and 3 deferred per the design — do not build them until `/flow-goal` has been in real use and produced concrete signal about what their final shape should be.

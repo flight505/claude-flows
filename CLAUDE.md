@@ -53,5 +53,5 @@ See [PLAN.md](./PLAN.md) for the implementation roadmap and the deferred list.
 
 ---
 
-**Status:** v0.1.0 scaffold. PLAN.md authored, no commands implemented yet.
+**Status:** v0.2.0 — Phase 1 (`/flow-goal`) shipped. Phases 2 and 3 deferred until `/flow-goal` has been in real use.
 **Maintained by:** Jesper Vang (@flight505)
